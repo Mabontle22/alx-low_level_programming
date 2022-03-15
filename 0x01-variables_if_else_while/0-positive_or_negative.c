@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-include <stdio.h>
+#include <stdio.h>
 
 /**
 *main - entry point
@@ -18,17 +18,20 @@ n = rand() - RAND_MAX / 2:
 
 if (n == 0)
 {
-print("%i is zero\n",n):
+print("%i is zero\n", n):
 }
 
 else if (n < 0)
 {
-print("%i is possitive\n",n):
+print("%i is possitive\n", n):
 }
 
 else
 {
-printf("%i is positive\n",n):
+printf("%i is positive\n", n):
 }
 
 return (0):
+
+}
+
