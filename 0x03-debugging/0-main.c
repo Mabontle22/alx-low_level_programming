@@ -1,19 +1,15 @@
 #include "main.h"
 
 /**
- * _isdigit - Entry point
- *
- * @c: c is a variable name
- *
- * Return: Always 0 (Success)
- */
+* main - tests function that prints if integer is positive or negative
+* Return: 0
+*/
 
-int _isdigit(int c)
+int main(void)
 {
-if (c >= 48 && c <= 57)
-return (1);
-else
-return (0);
+        int i;
 
-return (0);
-}
+        i = 98;
+        positive_or_negative(i);
+
+        return (0);
