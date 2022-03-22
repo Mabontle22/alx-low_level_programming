@@ -1,28 +1,47 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
+ * main - entry point
  *
- * Return: Always 0.
+ * Return: void
  */
+
 int main(void)
 {
-	int a;
 
-	for (a = 1; a <= 100; a++)
-	{
-	if (a % 3 == 0 && a % 5 == 0)
-	printf("FizzBuzz ");
-	else if (a == 100)
-	printf("Buzz");
-	else if (a % 3 == 0)
-	printf("Fizz ");
-	else if (a % 5 == 0)
-	printf("Buzz ");
-	else
-	printf("%d ", a);
-	}
+int p = 100;
+int i;
+
+i = 1;
+while (i <= p)
+{
+if (i % 3 == 0 && i % 5 == 0)
+{
+printf("FizzBuzz ");
+}
+
+else if (i % 3 == 0)
+{
+printf("Fizz ");
+}
+
+else if (i % 5 == 0)
+{
+if (i < p)
+printf("Buzz ");
+
+else
+printf("Buzz");
+}
+
+else
+{
+printf("%i ", i);
+}
+
+i++;
+
+
+}
 printf("\n");
 return (0);
 }

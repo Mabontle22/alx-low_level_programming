@@ -1,19 +1,18 @@
 #include "main.h"
-
 /**
- * print_numbers - Entry point
- *
- * Return: Always 0 (Success)
+ * print_numbers - print numbers
+ * Return: Always 0.
  */
-
 void print_numbers(void)
 {
-int a = 0;
+int i;
 
-while (a < 10)
+i = 0;
+while (i < 10)
 {
-_putchar(a + '0');
-a++;
+_putchar (i + '0');
+i++;
 }
-_putchar('\n');
+
+_putchar ('\n');
 }

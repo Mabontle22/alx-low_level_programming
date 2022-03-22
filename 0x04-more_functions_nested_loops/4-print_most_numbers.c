@@ -1,19 +1,23 @@
 #include "main.h"
-
 /**
- * print_most_numbers - Entry point
+ * print_most_numbers - print numbers
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
-
 void print_most_numbers(void)
 {
-int a;
 
-for (a = 0; a < 10; a++)
+int i;
+
+i = 0;
+while (i < 10)
 {
-if (a != 2 && a != 4)
-_putchar(a + '0');
+if (i != 2 && i != 4)
+{
+_putchar (i + '0');
 }
-_putchar('\n');
+i++;
+}
+
+_putchar ('\n');
 }

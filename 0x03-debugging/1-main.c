@@ -1,19 +1,24 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * _isdigit - Entry point
+ * main - causes an infinite loop
  *
- * @c: c is a variable name
- *
- * Return: Always 0 (Success)
+ * Return: 0
  */
-
-int _isdigit(int c)
+int main(void)
 {
-if (c >= 48 && c <= 57)
-return (1);
-else
-return (0);
+int i;
 
+printf("Infinite loop incoming :(\n");
+
+i = 0;
+
+/*
+*while (i < 10)
+*{
+*Infinite loop - No increase of variable
+*putchar(i);
+}
+*/
+printf("Infinite loop avoided! \\o/\n");
 return (0);
 }

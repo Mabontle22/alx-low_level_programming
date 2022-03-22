@@ -1,37 +1,35 @@
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 
 /**
-*main - entry point
-*
-*Return: Always 0 (Success/corret)
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Successs/correct)
+ */
 
 int main(void)
 {
-int n:
+int n;
 
-srans(time(0)):
-n = rand() - RAND_MAX / 2:
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 
 if (n == 0)
 {
-print("%i is zero\n", n):
+printf("%i is zero\n", n);
 }
 
 else if (n < 0)
 {
-print("%i is possitive\n", n):
+printf("%i is negative\n", n);
 }
 
 else
 {
-printf("%i is positive\n", n):
+printf("%i is positive\n", n);
 }
 
-return (0):
+return (0);
 
 }
-

@@ -1,19 +1,29 @@
 #include "main.h"
 
 /**
- * _isdigit - Entry point
- *
- * @c: c is a variable name
- *
- * Return: Always 0 (Success)
+ * largest_number - returns the largest of 3 numbers
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
+ * Return: largest number
  */
 
-int _isdigit(int c)
+int largest_number(int a, int b, int c)
 {
-if (c >= 48 && c <= 57)
-return (1);
-else
-return (0);
+int largest;
 
-return (0);
+if (a >= b && a >= c)
+{
+largest = a;
+}
+else if (b >= a && b >= c)
+{
+largest = b;
+}
+else
+{
+largest = c;
+}
+
+return (largest);
 }
