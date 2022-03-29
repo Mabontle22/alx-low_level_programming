@@ -1,24 +1,30 @@
 #include "main.h"
 
 /**
- * _strstr - funtion locates a substring.
- *
- * @haystack:  This is the main C string to be scanned.
- * @needle: This is the small string to be searched with-in haystack string.
- *
- * Return: Returns the transformed pointer.
- *
-**/
-char *_strstr(char *haystack, char *needle)
+ * _strstr - first occurrence of the substring needle in the string haystack
+ * @haystack: main str to be examined
+ * @needle: searched in haystack
+ * Return: return 0
+ **/
+
+char  *_strstr(char *haystack, char *needle)
 {
-int i;
+	char *str1, *str2; /*Declaring variables*/
 
-for (i = 0; haystack[i]; i++)
-if (haystack[i] == needle[0])
-return (haystack + i);
+	while (*haystack != '\0')
+	{
+		str1 = haystack; /*values*/
+		str2 = needle;
 
-if (haystack[i] == needle[0])
-return (haystack + i);
-
-return (0);
+		/*Star WHILE*/
+		while (*haystack != '\0' && *str2 != '\0' && *haystack == *str2)
+		{
+			haystack++;
+			str2++;
+		}
+		if (*str2 == '\0')
+			return (str1);
+		haystack = str1 + 1;
+	}
+	return (0);
 }
