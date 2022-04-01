@@ -1,47 +1,44 @@
 #include "main.h"
-int _multiplier(int x, int n);
-
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- *
- * @n: is a pointer to an int.
- *
- * Return: Returns the result.
- *
-**/
+ *_evaluate - evaluate function sqrt
+ *@i: interger
+ *@n: interger
+ *Return: evaluate sqrt
+ */
 
-int _sqrt_recursion(int n)
+int _evaluate(int i, int n)
 {
+/*Evaluate function*/
+if (n == 0 || n == 1)
+return (n);
 
-if (n == 1)
-	return (1);
-else if (n == 0)
-	return (0);
-else if (n < 0)
-	return (-1);
+else if (i * i < n)
+return (_evaluate(i + 1, n));
 
-return (_multiplier(2, n));
+else if (i * i == n) /*Condiction base*/
+return (i);
 
+return (-1);
+
+return (-1);
 }
 
 /**
- * _multiplier - Returns an iterative multiplication.
- *
- * @x: is an int.
- * @n: is an int.
- *
- * Return: Returns the result.
- *
-**/
+ *_sqrt_recursion - evaluate sqrt
+ *@n: interger
+ *Return: Sgrt_recursion
+*/
 
-int _multiplier(int x, int n)
+int _sqrt_recursion(int n)
 {
+int i = 0;
 
-if (x * x == n)
-	return (x);
-else if (x * x > n)
-	return (-1);
+if (i < 0) /*If n is negative*/
+return (-1);
+
 else
-	return (_multiplier(++x, n));
+{
+return (_evaluate(i, n)); /*Recursive call*/
+}
 
 }

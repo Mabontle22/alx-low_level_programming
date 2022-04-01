@@ -1,44 +1,57 @@
 #include "main.h"
 
-int _divider(int x, int n);
-
 /**
- * is_prime_number - Returns 0 on none prime, 1 on prime number..
- *
- * @n: is a pointer to an int.
- *
- * Return: Returns the result.
- *
-**/
+ *evaluate_num - recursion loop
+ *@num: num
+ *@iterator: number to iterate
+ *Return: return 1 or 0
+ */
 
-int is_prime_number(int n)
+int evaluate_num(int num, int iterator)
 {
 
-if (n <= 1)
-	return (0);
-else
-	return (_divider(2, n));
+if (iterator == num - 1)
+{
+return (1);
+}
+
+else if (num % iterator == 0)
+{
+return (0);
+}
+
+if (num % iterator != 0)
+{
+return (evaluate_num(num, iterator + 1));
+}
+
+return (0);
 
 }
 
 /**
- * _divider - Returns an iterative division.
- *
- * @x: is an int.
- * @n: is an int.
- *
- * Return: Returns the result.
- *
-**/
+ *is_prime_number - evaluate prime or not
+ *@num: number
+ *Return: return 1 prime - return 0 otherwise
+ */
 
-int _divider(int x, int n)
+int is_prime_number(int num)
 {
 
-if (x == n)
-	return (1);
-else if (n % x == 0)
-	return (0);
-else
-	return (_divider(++x, n));
+int iterator;
 
+iterator = 2;
+
+/* only greater than 2*/
+if (num < 2)
+{
+return (0);
+}
+
+if (num == 2)
+{
+return (1);
+}
+
+return (evaluate_num(num, iterator));
 }

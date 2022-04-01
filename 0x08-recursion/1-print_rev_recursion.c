@@ -1,22 +1,15 @@
 #include "main.h"
-
 /**
- * _print_rev_recursion - is a function that prints a string in reverse.
- *
- * @s: is a pointer to a char array
- *
- * Return: Return the transformed pointer
- *
-**/
+ *_print_rev_recursion - prints a string in reverse
+ *@s: pointer block of memory to fill
+ *Return: void
+ */
 
 void _print_rev_recursion(char *s)
 {
-if (*s == 0)
+if (*s) /*If statement*/
 {
-return;
+_print_rev_recursion(s + 1); /*add s*/
+_putchar(*s); /*print s*/
 }
-s++;
-_print_rev_recursion(s);
-s--;
-_putchar(*s);
 }
