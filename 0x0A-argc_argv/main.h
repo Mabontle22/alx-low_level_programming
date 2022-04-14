@@ -1,2 +1,8 @@
+
+#ifndef FILE_HOLBERTON
+#define FILE_HOLBERTON
+
 int _putchar(char c);
-int check_num(char *str);
+int _atoi(char *s);
+
+#endif
